@@ -1,0 +1,32 @@
+<script>
+    //  Write a function to sum all the elements of an array and return it
+
+    function sumArr(data) {
+        if (Array.isArray(data) == true) {
+            var sum = 0;
+            for (d of data) {
+                sum += d;
+            }
+            return sum;
+        }else{
+            console.error("data must be an array");
+            return null;
+        }
+    }
+
+    var arr1 = [4, 2, 5, 20, 50, 200, 100];
+    var r1 = sumArr(arr1);
+    console.log(r1);
+
+    var arr2 = [5, 10, 50, 30, 60, 100];
+    var r2 = sumArr(arr2);
+    console.log(r2);
+
+    var nums = [50, 60, 40, 30, 20, 10, 40, 60];
+    var r3 = sumArr(nums);
+    console.log(r3);
+
+    var r4 = sumArr(6);
+    console.log(r4);
+
+</script>

@@ -1,0 +1,74 @@
+<button onclick="obj.getData()">Click</button>
+<script>
+    const obj = {
+        uname: "Bhagirath",
+        age: 60,
+        getData: function () {
+            // console.log(`The age of ${this.uname} is ${this.age}`);
+            console.log(this);
+            window.setTimeout(
+                function () { // it rebinds this keyword with latest object
+                    // console.log(`The age of ${this.uname} is ${this.age}`);
+                    console.log(this);
+                },
+                2000
+            )
+            window.setTimeout(
+                () => { // arrow function doesn't rebinds this keywords with latest object
+                    console.log(this);
+                },
+                4000
+            )
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    // function add(a, b) {
+    //     return a + b;
+    // }
+    // const add = function (a, b) {
+    //     return a + b;
+    // }
+
+    // // const subt = (a, b) => {
+    // //     return a - b;
+    // // }
+    // const subt = (a, b) => a - b;
+    // const sqr = x => x * x;
+
+    // console.log(sqr(2));
+
+
+
+    // for (var i = 1; i <= 10; i++) {
+    // }
+    // console.log(i);
+
+    // const a = 5;
+    // console.log(a);
+    // const a = 10;
+    // console.log(a);
+
+    // var x = 10;
+    // x = 12;
+    // console.log(x);
+
+    // let y = 15;
+    // y = 20;
+    // console.log(y);
+
+    // const a = 70;
+    // a = 10;
+    // console.log(a);
+
+</script>

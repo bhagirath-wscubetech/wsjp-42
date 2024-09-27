@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+/* pseudo-state */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Assistant", sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 4px 12px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 53px;
+    height: 40px;
+    background-image: url(../images/MyntraWebSprite_27_01_2021.png);
+    background-size: 1404px 105px;
+    background-position: -462px 0;
+    margin-left: 60px;
+}
+
+nav {
+    width: 515px;
+    margin-left: 53px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    font-weight: bold;
+    color: rgb(40, 44, 63);
+    border-bottom: 2px solid transparent;
+    transition-duration: 1000ms;
+    /* 1s -> 1000ms */
+}
+
+.nav-item:hover {
+    border-color: #f25511;
+    color: #f25511;
+}
+
+#search {
+    font-size: 14px;
+    transition-duration: 600ms;
+}
+
+#search:hover {
+    font-size: 18px;
+}
+
+.search-box {
+    width: 480px;
+    margin-left: 40px;
+    background-color: #f5f5f6;
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+}
+
+.search-box input {
+    background-color: transparent;
+    border: none;
+    flex-grow: 1;
+}
+
+
+.search-box input:focus {
+    border: none;
+    outline: none;
+}
+
+.icons-tray {
+    width: 200px;
+    margin-left: 40px;
+    justify-content: space-around;
+    display: flex;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.icon-box span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+    margin-top: 100px;
+    border: 1px red solid;
+    transition-duration: 2s;
+    flex-direction: row;
+    /* 2000ms */
+}
+
+.main:hover {
+    background-color: lightcoral;
+}
+
+
+.main hr {
+    flex-grow: 1;
+    border: 1px solid #eaeaec;
+}

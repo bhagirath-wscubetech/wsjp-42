@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+::selection {
+    background-color: #d1ab7f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+#top {
+    width: 100%;
+    height: 550px;
+    background: url(../img/banner-bg.jpg) center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#top .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.top-tray {
+    color: white;
+    display: none;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+}
+
+#bars {
+    font-size: 30px;
+}
+
+nav ul {
+    transition: 350ms;
+    display: flex;
+    list-style: none;
+    font-size: 12px;
+    color: #222;
+    gap: 30px;
+    /* mobile */
+    position: fixed;
+    padding-left: 30px;
+    padding-top: 20px;
+    flex-direction: column;
+    width: 70%;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.menu-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.open-menu .menu-overlay {
+    display: block;
+}
+
+.open-menu nav ul {
+    left: 0 !important;
+}
+
+#closeBtn {
+    position: absolute;
+    color: white;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+.content p {
+    font-size: 14px;
+}
+
+.content h1 {
+    margin-top: 20px;
+    padding: 2px 0px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d1ab7f;
+    border-top: 1px solid #d1ab7f;
+    font-size: 30px;
+}
+
+.nav-bg-sticky {
+    transition: 400ms;
+    background-color: white;
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.open-menu {
+    overflow: hidden;
+}
+
+
+body.sticky-nav nav {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    max-width: 1000px;
+}

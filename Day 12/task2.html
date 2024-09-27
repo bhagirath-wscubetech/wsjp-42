@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Verdana;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 400px;
+            height: 500px;
+            box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            width: 100%;
+            height: 50%;
+            background-color: white;
+            padding: 10px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transition: 700ms;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            transition: 700ms;
+            opacity: 0;
+            top: 0;
+            left: 0;
+        }
+        .box:hover .overlay{
+            opacity: 1;
+        }
+
+        .box:hover .content {
+            top: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="https://picsum.photos/400/500" alt="">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Product 1</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure aliquam animi maxime ipsum ipsam saepe
+                earum itaque, veritatis repellendus voluptatum laboriosam soluta necessitatibus vitae ab optio repellat
+                commodi enim cupiditate.
+            </p>
+        </div>
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="first">
+        <a href="">Hello</a>
+    </div>
+    <div class="first">
+        <a href="">Kese</a>
+    </div>
+    <div class="first">
+        <a href="" class="demo">Hai</a>
+    </div>
+    <div class="first">
+        <a href="">App</a>
+    </div>
+    <div class="second">
+        <a href="" class="demo">Hiii</a>
+    </div>
+    <script>
+        // var anchors = document.getElementsByTagName("a");
+        // var anchors = document.querySelectorAll("div :not(.demo)");
+        // console.log(anchors);
+
+        document.addEventListener(
+            "contextmenu",
+            function (eve) {
+                eve.preventDefault();
+            }
+        )
+        document.addEventListener(
+            "keydown",
+            function (e) {
+                if (e.code == "KeyI" && e.shiftKey == true && e.ctrlKey == true)
+                    e.preventDefault();
+
+                if (e.code == "F12") e.preventDefault();
+
+            }
+        )
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px black solid;
+            margin: 100px auto;
+            text-align: center;
+            transform-origin: bottom center;
+            transform: rotateZ(0deg);
+        }
+
+        .loader {
+            width: 200px;
+            height: 200px;
+            margin: 40px auto;
+            border: 2px black solid;
+            border-radius: 50%;
+            border-bottom-color: transparent;
+            transition: 3s;
+        }
+
+        .loader:hover {
+            /* transform: rotate(360deg); */
+            transform: rotate(2.5turn);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div class="box">
+        <h1>Hello</h1>
+    </div>
+</body>
+
+</html>

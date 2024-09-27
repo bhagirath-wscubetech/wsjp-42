@@ -1,0 +1,49 @@
+<script>
+    function findFact(num, fact = 1) {
+        // num = 5,fact = 1 
+        fact*=num; 
+        // fact = 5 
+        // fact = 5*4 // fact = 20
+        // fact = 3*20 // fact = 60
+        // fact = 2 * 60 // fact = 120
+        // fact = 1 * 120 // fact = 120
+        num--; 
+        // 4 
+        // 3
+        // 2
+        // 1
+        // 0
+        if(num != 0){
+            return findFact(num,fact);
+            // findFact(4,5)
+            // findFact(3,20);
+            // findFact(2,60);
+            // findFact(1,120)
+        }else{
+            return fact;
+        }
+    }
+    console.log(findFact(5));
+    console.log(findFact(4));
+    console.log(findFact(10));
+
+
+
+
+    // function otp() {
+    //     var x = Math.random();
+    //     var a = x * 1000000;
+    //     var b = Math.round(a);
+    //     if (b < 100000) {
+    //         return otp();
+    //     } else {
+    //         return b;
+    //     }
+    // }
+    // console.log(otp());
+    // otp();
+    // otp();
+
+    // floor
+    // ceil
+</script>

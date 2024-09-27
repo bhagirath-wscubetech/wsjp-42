@@ -1,0 +1,42 @@
+<script>
+    // var arr = [
+    //     'John',
+    //     'Jenny',
+    //     'Ram',
+    //     'Ritika'
+    // ]
+    // console.log(arr);
+    // var detailsArr = [
+    //     'Ram',
+    //     'Ramesh',
+    //     21,
+    //     45
+    // ];
+    // console.log(detailsArr[1]);
+
+    var details = {
+        name: "Ram",
+        email: "ram@gmail.com",
+        f_name: "Ramesh",
+        age: 21,
+        f_age: 45,
+        getFullName: function () {
+            console.log(`The age of ${this.name} is ${this.age} - ${this.email}`);
+            // template literal
+        }
+    }
+    details.getFullName();
+
+
+    var student = {
+        name: "Yogesh",
+        email: "yogesh@gmail.com",
+        age: 55,
+        getData: function () {
+            console.log(`The email of ${this.name} is ${this.email}`);
+        }
+    }
+
+    student.getData();
+
+</script>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .parent {
+            width: 1000px;
+            border: 1px black solid;
+            margin: auto;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .box {
+            border: 2px red solid;
+            padding: 20px;
+        }
+
+        .child {
+            font-size: 30px;
+            text-align: center;
+            border: 2px blue solid;
+            padding: 4px;
+            flex-grow: 1;
+        }
+
+        img {
+            width: 100%;
+            height: 250px;
+        }
+
+        .p-box {
+            width: 200px;
+            padding: 0 5px;
+            transition-duration:700ms;
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+
+        .p-box:hover {
+            flex-shrink: 0;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box">
+            Hello eveyone
+        </div>
+        <div class="box" style="flex-grow: 1;">2</div>
+        <div class="box">Three</div>
+    </div>
+
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+    </div>
+
+    <div class="parent">
+        <div class="p-box">
+            <img src="https://picsum.photos/200/300?random=1" alt="">
+        </div>
+        <div class="p-box">
+            <img src="https://picsum.photos/200/300?random=2" alt="">
+        </div>
+        <div class="p-box">
+            <img src="https://picsum.photos/200/300?random=3" alt="">
+        </div>
+        <div class="p-box">
+            <img src="https://picsum.photos/200/300?random=4" alt="">
+        </div>
+        <div class="p-box">
+            <img src="https://picsum.photos/200/300?random=5" alt="">
+        </div>
+        <div class="p-box">
+            <img src="https://picsum.photos/200/300?random=6" alt="">
+        </div>
+        <div class="p-box">
+            <img src="https://picsum.photos/200/300?random=7" alt="">
+        </div>
+        <div class="p-box">
+            <img src="https://picsum.photos/200/300?random=8" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

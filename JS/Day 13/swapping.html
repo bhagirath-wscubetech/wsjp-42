@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .parent div {
+            width: 500px;
+            height: 300px;
+            border: 1px red solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div id="box1">
+            <img src="https://picsum.photos/500/300?random=1" alt="">
+        </div>
+        <div id="box2"></div>
+    </div>
+    <button onclick="swap1()">Swap it 1</button>
+    <button onclick="swap2()">Swap it 2</button>
+    <script>
+        var box1 = document.getElementById("box1");
+        var box2 = document.getElementById("box2");
+        function swap1() {
+            if (box1.innerHTML != "") {
+                box2.innerHTML = box1.innerHTML;
+                box1.innerHTML = ""; // kuch bhi nahi
+            }
+        }
+        function swap2() {
+            if (box2.innerHTML != "") {
+                box1.innerHTML = box2.innerHTML;
+                box2.innerHTML = ""; // kuch bhi nahi
+            }
+        }
+    </script>
+</body>
+
+</html>

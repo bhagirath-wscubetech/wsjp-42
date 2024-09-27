@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <script>
+        function cal(a, b, opr) {
+            if (opr == "+") {
+                // console.log(a + b);
+                return a + b;
+            } else if (opr == "-") {
+                // console.log(a - b);
+                return a - b;
+            } else if (opr == "x") {
+                // console.log(a * b);
+                return a * b;
+            } else if (opr == "/") {
+                // console.log(a / b);
+                return a / b;
+            } else {
+                console.error('Invalid opr');
+            }
+        }
+        // NaN - Not a number
+
+        var r1 = cal(5, 10, "+");
+        console.log(r1);
+        var r2 = cal(r1, 10, "-")
+        console.log(r2);
+        var r3 = cal(r2, 5, "x");
+        console.log(r3);
+        var r4 = cal(r3, 6, "/");
+        console.log(r4);
+        cal(40, 10, "b");
+    </script>
+</body>
+
+</html>

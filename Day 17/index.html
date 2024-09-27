@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #080e24;
+        }
+
+        .main {
+            width: 700px;
+            height: 700px;
+            margin: 10px auto;
+            position: relative;
+        }
+
+
+        .orbit1 {
+            width: 90%;
+            height: 90%;
+            border: 2px solid #394057;
+            border-radius: 50%;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            animation: rotate 10s infinite linear;
+            /* animation-name: rotate;
+            animation-duration: 10000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; */
+        }
+
+        .planet1 {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #dfd3a9;
+            position: absolute;
+            top: 220px;
+        }
+
+        .orbit2 {
+            width: 80%;
+            height: 80%;
+            border: 2px solid #394057;
+            border-radius: 50%;
+            position: relative;
+            left: 75px;
+            top: 75px;
+            animation: 14000ms rotate 1000ms infinite linear;
+            /* animation-timing-function: linear;
+            animation-name: rotate;
+            animation-iteration-count: infinite;
+            animation-duration: 14000ms;
+            animation-delay: 1000ms; */
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .planet2 {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: orange;
+            position: absolute;
+            transition: 10s;
+            top: 100px;
+            left: 45px;
+        }
+
+        .chand {
+            width: 10px;
+            height: 10px;
+            background-color: gray;
+            border-radius: 50%;
+            position: absolute;
+            top: -15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="orbit1">
+            <div class="planet1"></div>
+        </div>
+        <div class="orbit2">
+            <div class="planet2">
+                <div class="chand"></div>
+            </div>
+        </div>
+        <div class="orbit3"></div>
+        <div class="orbit4"></div>
+    </div>
+</body>
+
+</html>

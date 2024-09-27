@@ -1,0 +1,47 @@
+@media (min-width:768px) {
+    .content p {
+        font-size: 16px;
+    }
+
+    .content h1 {
+        font-size: 50px;
+    }
+
+    #bars {
+        display: none;
+    }
+
+    nav ul {
+        position: initial;
+        padding-left: initial;
+        padding-top: initial;
+        flex-direction: initial;
+        width: initial;
+        height: initial;
+        background-color: initial;
+        color: initial;
+    }
+
+    #top {
+        height: 650px;
+    }
+}
+
+@media (min-width:992px) {
+    .top-tray {
+        display: flex;
+    }
+
+    .content h1 {
+        font-size: 72px;
+    }
+
+    #top {
+        height: 750px;
+    }
+    body.sticky-nav .nav-bg-sticky {
+        opacity: 1 !important;
+        visibility: visible;
+    }
+    
+}

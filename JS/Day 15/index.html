@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #main {
+            width: 400px;
+            height: 400px;
+            border: 1px grey solid;
+            margin: 10px 0;
+            background-image: url('images/c1.jpg');
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <!-- <img width="450" height="450" id="mainImg" src="images/c1.jpg" alt=""> -->
+    </div>
+    <img width="100" src="images/c1.jpg" alt="" onmouseenter="getData(this)">
+    <img width="100" src="images/c2.jpg" alt="" onmouseenter="getData(this)">
+    <img width="100" src="images/c3.jpg" alt="" onmouseenter="getData(this)">
+    <img width="100" src="images/c4.jpg" alt="" onmouseenter="getData(this)">
+    <script>
+        // const mainImg = document.getElementById("mainImg");
+        var main = document.getElementById("main");
+
+        function getData(elem) {
+            // mainImg.src = elem.src;
+            main.style.backgroundImage = `url(${elem.src})`;
+        }
+    </script>
+</body>
+
+</html>

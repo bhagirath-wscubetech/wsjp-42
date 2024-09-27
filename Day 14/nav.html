@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            padding: 20px;
+            background-color: #2e58d0;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0px;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        nav {
+            width: 1000px;
+            margin: auto;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        #menu li {
+            position: relative;
+            font-size: 20px;
+        }
+
+        #menu li:hover .child {
+            opacity: 1;
+            visibility: visible;
+            top: 25px;
+        }
+
+        .child {
+            transition: 700ms;
+            position: absolute;
+            width: 150px;
+            left: 0;
+            top: 125px;
+            background-color: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .child li {
+            padding: 10px;
+        }
+
+        .child li:hover {
+            background-color: salmon;
+        }
+
+        .child li:hover .sub-child {
+            opacity: 1;
+            visibility: visible;
+            top: 0;
+        }
+
+        p {
+            margin: 20px auto;
+            text-align: justify;
+        }
+
+        .backToTop {
+            width: 80px;
+            height: 80px;
+            background-color: rgb(239, 79, 95);
+            border-radius: 50%;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+
+        .parent {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+            border: 2px black solid;
+        }
+
+        .box {
+            width: 30%;
+            padding: 15px;
+        }
+
+        .paras {
+            width: 70%;
+        }
+
+        .card {
+            width: 100%;
+            height: 400px;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 100px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="backToTop"></div>
+
+    <header>
+        <nav>
+            <h1>NavBar</h1>
+            <ul id="menu">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Services</a>
+                    <ul class="child">
+                        <li>
+                            <a href="">Web Design</a>
+                        </li>
+                        <li>
+                            <a href="">Web Dev</a>
+                        </li>
+                        <li>
+                            <a href="">SEO</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Product</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="parent">
+        <div class="box">
+            <div class="card">
+                <h1 style="text-align: center;">Main Card Hun</h1>
+            </div>
+        </div>
+        <div class="paras">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consectetur repudiandae odio dolorem
+                facilis fugiat dolorum quod aperiam est iure natus cumque non, at nemo doloremque voluptatibus numquam.
+                Consequatur, voluptate!</p>
+            <p>Exercitationem consectetur, iste harum eaque doloribus iure eum delectus magni ex voluptates? Praesentium
+                iusto architecto omnis quibusdam incidunt hic unde ad in, deleniti exercitationem eaque obcaecati
+                excepturi
+                quas aliquid laudantium?</p>
+            <p>Officia, accusantium reprehenderit esse dignissimos praesentium beatae, nisi velit tempora alias earum,
+                optio
+                sed est architecto. Labore officia fuga omnis provident error. Ratione quo libero repudiandae aliquid
+                incidunt animi consectetur.</p>
+
+            <p>Esse reprehenderit impedit adipisci aliquam, alias cupiditate! Recusandae commodi, dolor nisi provident
+                voluptatibus debitis quidem dolores sit incidunt earum eos unde reiciendis fuga minima? Et, blanditiis!
+                Perspiciatis illo et quibusdam?</p>
+            <p>Itaque tempora nostrum id unde aperiam excepturi voluptas eius ex aliquam doloribus, omnis laudantium
+                placeat
+                mollitia ea ratione maiores repudiandae, tenetur fugiat deserunt, necessitatibus animi. Maxime tempora
+                expedita doloribus repellendus?</p>
+            <p>Culpa libero praesentium odit at ut expedita minima molestias voluptatum ex. Accusantium, eos!
+                Perferendis
+                aspernatur, debitis iusto quam error natus iure nobis doloremque at qui exercitationem quis quo eos
+                earum.
+            </p>
+            <p>Doloribus temporibus laboriosam rerum id ipsam dolorem est voluptatibus provident beatae ipsum quas quia
+                enim
+                eos, reprehenderit dolorum cumque officia iste laborum earum tenetur nulla hic debitis? Officia, quos
+                autem!
+            </p>
+            <p>Provident, nobis veritatis iste omnis placeat optio, sint velit ipsa eum, maiores quasi? Neque laborum
+                quae
+                libero aperiam velit laudantium dolorem minima alias explicabo. Provident quae sed obcaecati
+                necessitatibus
+                accusamus!</p>
+            <p>Consequatur fuga, tempore illum enim sapiente veniam aliquam laborum voluptatum dignissimos sint numquam
+                ipsam aliquid maxime. Ullam dignissimos, perspiciatis eos nisi amet velit esse corrupti ut accusamus
+                iusto
+                quasi quos.</p>
+            <p>Id illo tempora officiis consequuntur maiores a facilis molestiae. Obcaecati consequuntur soluta atque
+                pariatur corrupti voluptates at harum eaque. Ducimus aut, amet nam vitae dolorem harum. Hic dolor
+                temporibus
+                dicta.</p>
+            <p>Illum repellendus tempore cum corrupti architecto. Eaque sequi dolor vel? Veritatis modi, laudantium
+                omnis
+                consectetur facilis nostrum praesentium eaque, voluptas accusantium odio, molestiae fuga. Nisi numquam
+                quaerat enim necessitatibus sit.</p>
+            <p>Similique minima sunt distinctio rerum, consectetur inventore placeat laboriosam fuga, ipsum blanditiis
+                quo
+                incidunt quia tempore cumque quos aperiam. Voluptatem sit, voluptas natus repellendus similique
+                consectetur
+                architecto error animi inventore!</p>
+            <p>Vel at ab impedit temporibus exercitationem dicta voluptate, doloremque perferendis dolorum atque maiores
+                rem
+                tempore quis illum enim nostrum quas molestiae quasi aliquid veritatis. Consequuntur illo error facilis
+                est
+                tenetur?</p>
+            <p>Libero aspernatur, consequatur inventore alias voluptatem ducimus fugit eaque aliquid animi eum sit,
+                incidunt
+                sequi impedit rem laboriosam optio at odit? Voluptate, laborum harum labore fuga quae possimus aut
+                architecto.</p>
+            <p>Aliquam porro, corrupti eveniet quasi et suscipit rerum enim sunt delectus consequatur voluptatibus! Vero
+                odio natus fugiat adipisci quam accusamus iste laboriosam ipsa. Distinctio in enim deserunt sequi
+                praesentium. Ipsa?</p>
+            <p>Eum vel consequuntur quasi ipsum, voluptates provident minima reprehenderit aperiam consectetur esse
+                placeat
+                doloremque, sapiente, omnis iure suscipit nihil voluptatibus labore nulla. Maiores consectetur corrupti
+                ipsum ab. Unde, fugit porro?</p>
+            <p>Delectus harum eligendi itaque voluptas suscipit labore illum. Ullam, excepturi. Nam esse, perferendis,
+                et,
+                quibusdam obcaecati ab minus architecto officia sunt quasi fugit? Sit quaerat exercitationem animi
+                aliquid
+                vitae tempore.</p>
+            <p>Consectetur earum cupiditate optio nesciunt quia qui ratione eligendi aliquid quasi quidem provident
+                officia
+                doloremque tempore, ex deleniti et eos vitae accusamus harum voluptate sapiente! Eligendi molestiae
+                cumque
+                voluptatibus magnam.</p>
+            <p>Molestias laudantium error amet nam reprehenderit maxime repellat beatae placeat alias at repellendus
+                ipsum,
+                ut sequi eum accusantium. Placeat laudantium nobis quam id expedita reiciendis corporis excepturi velit
+                tempora dolore.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+            <p>Aspernatur laboriosam, similique at corrupti error quis enim nostrum assumenda, nisi officia natus
+                voluptatibus nulla cumque repellendus doloremque? Nemo corrupti, numquam aliquam similique incidunt
+                minima
+                voluptatum dolores quisquam in consequatur.</p>
+
+        </div>
+    </div>
+    <img src="https://picsum.photos/1500/400" width="100%" alt="">
+    <img src="https://picsum.photos/1500/400" width="100%" alt="">
+    <img src="https://picsum.photos/1500/400" width="100%" alt="">
+    <img src="https://picsum.photos/1500/400" width="100%" alt="">
+    <img src="https://picsum.photos/1500/400" width="100%" alt="">
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: verdana;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+.container {
+    max-width: 1100px;
+    min-height: 400px;
+    margin: auto;
+}
+
+.box h2 {
+    padding: 10px 5px;
+    border: 1px grey solid;
+    cursor: pointer;
+    position: relative;
+}
+
+.box h2 i {
+    position: absolute;
+    right: 10px;
+    transition: 300ms;
+}
+
+.box p {
+    border: 1px grey solid;
+    border-top: none;
+    padding: 0px 10px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 400ms;
+}
+
+.open {
+    opacity: 1 !important;
+    padding: 10px !important;
+    overflow: visible !important;
+}
+
+.open-heading {
+    background-color: lightblue;
+}
+
+.open-heading i {
+    transform: rotate(180deg);
+}

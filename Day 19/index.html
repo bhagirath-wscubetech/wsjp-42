@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #2e3d50;
+            /* background-image: linear-gradient(to top, rgb(46, 61, 80) 60%, rgba(46, 61, 80, 0.8)); */
+            animation: box 500ms infinite linear;
+        }
+
+        @keyframes box {
+            17% {
+                border-bottom-right-radius: 3px;
+            }
+
+            25% {
+                transform: rotate(22.5deg) translateY(9px);
+            }
+
+            50% {
+                transform: rotate(45deg) translateY(18px);
+                border-bottom-right-radius: 50px;
+            }
+
+            75% {
+                transform: rotate(67.5deg) translateY(9px);
+            }
+
+            100% {
+                transform: rotate(90deg);
+                border-bottom-right-radius: 3px;
+            }
+        }
+
+        .shadow {
+            width: 100px;
+            height: 10px;
+            border-radius: 50%;
+            background: lightgray;
+            animation: shadow 500ms infinite alternate;
+            position: relative;
+            top:20px;
+        }
+
+        @keyframes shadow {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(0.6);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box"></div>
+        <div class="shadow"></div>
+    </div>
+</body>
+
+</html>

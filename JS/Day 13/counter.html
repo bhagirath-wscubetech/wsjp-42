@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .don{
+            color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="desc()">-</button>
+    <div id="countBox">
+        0
+    </div>
+    <button onclick="inc()">+</button>
+    <script>
+        var countBox = document.getElementById("countBox");
+        var count = 0;
+        function inc() {
+            count++;
+            // countBox.innerText = "<h1>" + count + "</h1>";
+            countBox.innerHTML = "<h1 class='don'>" + count + "</h1>";
+        }
+        function desc() {
+            count--;
+            // countBox.innerText = "<h1>" + count + "</h1>";
+            countBox.innerHTML = "<h1 class='don'>" + count + "</h1>";
+        }
+    </script>
+</body>
+
+</html>

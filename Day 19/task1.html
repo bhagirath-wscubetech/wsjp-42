@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .parent{
+            width: 1000px;
+            height: 200px;
+            margin: 500px auto;
+            position: relative;
+            animation: parent 2000ms linear infinite alternate;
+        }
+        @keyframes parent {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(180deg);
+            }
+        }
+        .ball{
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>

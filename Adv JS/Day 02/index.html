@@ -1,0 +1,26 @@
+<button onclick="getData()">Click me</button>
+<ul id="test"></ul>
+
+<script>
+    const test = document.getElementById("test");
+    // const obj = {
+    //     name:"Bhagirath"
+    // };
+    // const user = {
+    //     "name":"Bhagirath"
+    // }
+    async function getData() {
+        const response = await fetch('https://fakestoreapi.com/products');
+        if (response.status == 200) {
+            const data = await response.json();
+            // array of objects
+            for (d of data) {
+                const li = document.createElement("li");
+                li.innerText = d.title;
+                test.append(li);
+            }
+        } else {
+            test.append("Something went wrong");
+        }
+    }
+</script>

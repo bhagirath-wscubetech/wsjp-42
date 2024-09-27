@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+header {
+    width: 100%;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+header .tickets-list {
+    list-style: none;
+    margin-left: 100px;
+    display: flex;
+    gap: 10px
+}
+
+header .tickets-list li {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 10px;
+    border-radius: 8px;
+    /* 
+    0.5rem 
+    1 rem = 16px 
+    */
+}
+
+header .tickets-list li:first-child {
+    background-color: rgb(216, 78, 85);
+    color: white;
+}
+
+header .tickets-list li:first-child img {
+    filter: brightness(0) invert(1);
+}
+
+header .tickets-list li:last-child img {
+    filter: brightness(0);
+}
+
+header .tickets-list li img {
+    width: 84px;
+    margin-bottom: 5px;
+    height: 20px;
+}
+
+header .tickets-list li:last-child {
+    position: relative;
+}
+
+#top-offer {
+    background-color: #60b681;
+    color: white;
+    font-size: 10px;
+    padding: 4px 2px;
+    border-radius: 6px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.top-menu-list {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    margin-left: auto;
+    font-size: 18px;
+}
+
+#herobanner {
+    width: 100%;
+    height: 520px;
+    background-image: url(../images/HeroImageV2_C.png);
+    background-size: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.tagline {
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+}
+
+.search-box {
+    overflow: hidden;
+    width: 1000px;
+    height: 100px;
+    border-radius: 30px;
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.search-box .search-box-item {
+    border-right: 1px lightgray solid;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.search-box-item i{
+    font-size: 24px;
+}
+
+.search-box-item input{
+    width: 100%;
+    border:none;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.search-box-item div{
+    width: 50%;
+}
+
+#exchange {
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    color: rgb(107, 107, 107);
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    left: 230px;
+    top: 30px;
+}
+
+.trending{
+    width: 1000px;
+    height: 300px;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    top:-50px;
+    background-color: white;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 100px;
+}

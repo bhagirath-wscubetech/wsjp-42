@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+
+.container {
+    max-width: 1100px;
+    min-height: 400px;
+    margin: auto;
+}
+
+#tab-parent {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+#tab-parent li {
+    border: 1px grey solid;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.box {
+    border: 1px grey solid;
+    padding: 10px;
+    transition: 900ms;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+.active {
+    background-color: black;
+    color: white;
+}
+
+.open {
+    opacity: 1 !important;
+    visibility: visible;
+    transform: scaleY(1) !important;
+}
+
+.parent {
+    position: relative;
+}

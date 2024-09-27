@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+    </style>
+</head>
+
+<body>
+    <button disabled onclick="kuchbhi(0)">-</button>
+    <input disabled value="0" min="0" max="10" type="number">
+    <button onclick="kuchbhi(1)">+</button>
+    <script>
+        var inp = document.getElementsByTagName("input")[0];
+        var btns = document.getElementsByTagName("button");
+        var count = 0;
+        function kuchbhi(flag) {
+            if (flag == 0) {
+                inp.value = --count;
+            } else {
+                inp.value = ++count;
+            }
+            if (count == 10) {
+                btns[1].disabled = true;
+            } else {
+                btns[1].disabled = false;
+            }
+            if (count == 0) {
+                btns[0].disabled = true;
+            } else {
+                btns[0].disabled = false;
+            }
+        }  
+    </script>
+</body>
+
+</html>

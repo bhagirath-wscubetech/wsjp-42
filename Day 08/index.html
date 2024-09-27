@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana;
+        }
+
+        .container {
+            width: 1000px;
+            height: 600px;
+            border: 1px black solid;
+            margin: auto;
+        }
+
+        .form-row {
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        input {
+            font-size: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="form-row">
+                <label>Name</label>
+                <input name="name" required type="text" maxlength="20">
+            </div>
+            <div class="form-row">
+                <label>Email</label>
+                <input name="email" required type="email">
+            </div>
+            <div class="form-row">
+                <label>Password</label>
+                <input name="password" required type="password">
+            </div>
+            <div class="form-row">
+                <label>Age</label>
+                <input name="age" type="number" max="35" min="18">
+            </div>
+            <div class="form-row">
+                <label>DOB</label>
+                <input name="dob" type="date" min="2024-03-09" max="2024-03-14">
+            </div>
+            <div class="form-row">
+                <label>Country</label>
+                <select name="country">
+                    <option>India</option>
+                    <option>America</option>
+                    <option>China</option>
+                    <option>Sri Lanka</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label>Gender</label>
+                <br>
+                Male <input type="radio" value="M" name="gender">
+                Female <input type="radio" value="F" name="gender">
+            </div>
+            <div class="form-row">
+                <input type="range">
+                <input type="color">
+            </div>
+            <input type="hidden" name="hidden_data" value="123456">
+            <div class="form-row">
+                <label>Add-Ons</label>
+                <br>
+                Coke <input type="checkbox" name="addon">
+                Ice cream <input type="checkbox" name="addon">
+                Fries <input type="checkbox" name="addon">
+            </div>
+            <div class="form-row">
+                <label>Suggestion</label>
+                <textarea></textarea>
+            </div>
+            <div class="form-row">
+                <label>File</label>
+                <input type="file">
+            </div>
+            <div class="form-row">
+                <input type="submit" value="Save">
+                <input type="reset">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

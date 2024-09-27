@@ -1,0 +1,39 @@
+<script>
+    function counter(value) {
+        return {
+            inc: () => ++value,
+            desc: () => --value
+        }
+    }
+    // method chaining
+    console.log(counter(3).inc());
+    console.log(counter(10).desc());
+
+    // function savePassword(pass, key) {
+    //     function encode() {
+    //         return key + "123" + pass + "123";
+    //     }
+    //     const encPass = encode();
+    //     console.log(encPass);
+    // }
+
+    // savePassword("IloveIndia","meri-key");
+
+    // IloveIndia
+    // 123IloveIndia
+
+
+
+    // console.log(add(1, 2));
+
+    // var add = (a, b) =>  {
+    //     return a + b;
+    // }
+
+
+    // console.log(a);
+    // var a = 5; // hoisting
+
+    // console.log(x);
+    // let x = 10;
+</script>
