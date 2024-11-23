@@ -9,5 +9,14 @@ OrderRouter.post(
     OrderController.placeOrder
 )
 
+OrderRouter.post(
+    "/payment-success",
+    OrderController.paymentSuccess
+)
+
+OrderRouter.get(
+    "/admin-order",
+    OrderController.adminOrder
+)
 
 module.exports = OrderRouter;

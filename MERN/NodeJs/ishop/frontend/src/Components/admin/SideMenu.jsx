@@ -33,23 +33,23 @@ export default function SideMenu() {
         }
     }
 
-    useEffect(
-        () => {
-            const { lsAdmin, lsToken } = getLsAdmin();
-            if (lsAdmin != null) {
-                dispatcher(lsToAdmin({ data: JSON.parse(lsAdmin), token: lsToken }));
-            }
-        }, [] // empty -> only at first render
-    )
+    // useEffect(
+    //     () => {
+    //         const { lsAdmin, lsToken } = getLsAdmin();
+    //         if (lsAdmin != null) {
+    //             dispatcher(lsToAdmin({ data: JSON.parse(lsAdmin), token: lsToken }));
+    //         }
+    //     }, [] // empty -> only at first render
+    // )
 
-    useEffect(
-        () => {
-            const { lsAdmin } = getLsAdmin();
-            if (admin?.data == null && lsAdmin == null) {
-                navigator("/admin/login");
-            }
-        }, [admin, location.pathname] //dependency list
-    )
+    // useEffect(
+    //     () => {
+    //         const { lsAdmin } = getLsAdmin();
+    //         if (admin?.data == null && lsAdmin == null) {
+    //             navigator("/admin/login");
+    //         }
+    //     }, [admin, location.pathname] //dependency list
+    // )
 
 
     const menu = [

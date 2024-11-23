@@ -6,8 +6,10 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { emptyCart } from "../../reducers/CartSlice";
 import { Context } from "../../MainContext";
+import useRazorpay from "react-razorpay";
 
 export default function Checkout() {
+    const [Razorpay] = useRazorpay();
     const cart = useSelector(store => store.cart);
     const user = useSelector(store => store.user);
     const [adress_index, setAddressIndex] = useState(0);
@@ -30,11 +32,16 @@ export default function Checkout() {
             }
         ).then(
             (response) => {
-
                 if (response.data.status == 1) {
                     showToast(response.data.msg, 1);
-                    navigator(`/thank-you/${response.data.order_id}`);
-                    dispatcher(emptyCart());
+                    if (payment_mode == 0) {
+                        // COD
+                        navigator(`/thank-you/${response.data.order_id}`);
+                        dispatcher(emptyCart());
+                    } else {
+                        // prepaid
+                        handlePayment(response.data.order_id, response.data.razorpay_order_id)
+                    }
                 } else {
                     showToast(response.data.msg, 0);
                 }
@@ -46,6 +53,60 @@ export default function Checkout() {
         )
 
     }
+
+    const handlePayment = async (order_id, razorpay_order_id) => {
+
+        const options = {
+            key: "rzp_test_7fj2aHwMfwBL0b", // Enter the Key ID generated from the Dashboard
+            currency: "INR",
+            name: "WsCube Tech",
+            image: "https://www.wscubetech.com/images/wscube-tech-logo-2.svg",
+            order_id: razorpay_order_id, //This is a sample Order ID. Pass the `id` obtained in the response of createOrder().
+            handler: function (response) {
+                console.log(response);
+                axios.post(
+                    "http://localhost:5000/order/payment-success",
+                    {
+                        order_id,
+                        razorpay_response: response,
+                        user_id: user?.data?._id
+                    }
+                ).then(
+                    (response) => {
+                        showToast(response.data.msg, response.data.status);
+                        if (response.data.status == 1) {
+                            navigator(`/thank-you/${order_id}`);
+                            dispatcher(emptyCart());
+                        }
+                    }
+                ).catch(
+                    () => {
+
+                    }
+                )
+                // alert(response.razorpay_payment_id);
+                // alert(response.razorpay_order_id);
+                // alert(response.razorpay_signature);
+            },
+            prefill: {
+                name: user?.data?.name,
+                email: user?.data?.email,
+                contact: user?.data?.contact,
+            },
+            theme: {
+                color: "#3399cc",
+            },
+        };
+
+        const rzp1 = new Razorpay(options);
+
+        rzp1.on("payment.failed", function (response) {
+            console.clear();
+            console.log(response);
+        });
+
+        rzp1.open();
+    };
 
     return (
         <section className="bg-white py-8 antialiased dark:bg-gray-900 md:py-16">

@@ -8,7 +8,6 @@ class ProductController {
         return new Promise(
             (res, rej) => {
                 try {
-                    console.log(flag, "flag");
                     const changeObj = {};
                     if (flag == 1) {
                         changeObj.stock = new_status;
@@ -209,7 +208,6 @@ class ProductController {
                         })
                     }
                 } catch (err) {
-                    console.log(err.message);
                     rej({
                         msg: 'Internal server error',
                         status: 0

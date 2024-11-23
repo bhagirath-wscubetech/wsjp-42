@@ -22,6 +22,7 @@ import { useDispatch } from 'react-redux';
 import { lsToCart } from './reducers/CartSlice';
 import Register from './Pages/website/Register';
 import { lsToUser } from './reducers/UserSlice';
+import ThankYou from './Pages/website/ThankYou';
 
 export default function App() {
   const dispatcher = useDispatch();
@@ -45,6 +46,10 @@ export default function App() {
           {
             path: "store/:category_slug?",
             element: <Store />
+          },
+          {
+            path: "thank-you/:order_id",
+            element: <ThankYou />
           },
           {
             path: "cart",

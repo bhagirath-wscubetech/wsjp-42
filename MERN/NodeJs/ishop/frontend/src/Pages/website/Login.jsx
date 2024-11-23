@@ -127,7 +127,7 @@ export default function Login() {
                                     Password
                                 </label>
                                 <input
-                                    defaultValue={"Bhagirath@123"}
+                                    defaultValue={"Bhagirath@123!"}
                                     type="password"
                                     name="password"
                                     id="password"
